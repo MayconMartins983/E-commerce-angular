@@ -1,0 +1,33 @@
+<!-- product-details.component.html -->
+
+<div class="modal-header">
+  <h4 class="modal-title">{{ produto.nome }}</h4>
+  <button type="button" class="close btn btn-outline-primary" (click)="closeModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="produto.srcImg" class="img-fluid" alt="{{ produto.nome }}">
+    </div>
+    <div class="col-md-6">
+      <p><b>Preço:</b> {{ produto.preco | valor}}</p>
+      <div class="quantity-control mb-3">
+        <button class="btn btn-sm btn-danger me-3" (click)="decreaseQuantity()"><i class="bi bi-dash"></i></button>
+        <span class="quantity">{{ quantity }}</span>
+        <button class="btn btn-sm btn-success ms-3" (click)="increaseQuantity()"><i class="bi bi-plus"></i></button>
+      </div>
+      <span *ngIf="quantity != 1" class="mt-5"><h4>{{ (produto.preco * quantity) | valor }}</h4></span>
+      <div class="mt-4">
+            <p>
+                  {{ produto.descricao }}
+            </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="closeModal()">Fechar</button>
+  <button type="button" class="btn btn-primary" (click)="addToCart()">Adicionar ao Carrinho</button>
+</div>

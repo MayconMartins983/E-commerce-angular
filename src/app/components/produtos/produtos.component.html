@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="container mt-5 p-4">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group mb-4">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Text input with segmented dropdown button"
+            placeholder="Filtre os produto aqui..."
+          />
+          <span type="button" class="btn btn-outline-primary span-custom">
+            Filtrar por...
+          </span>
+          <button
+            type="button"
+            class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Nome</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Categoria</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4" *ngFor="let produto of produtos">
+        <div class="card mb-4">
+          <img [src]= "produto.srcImg" class="card-img-top" />
+          <div class="card-body">
+            <h5 class="card-title">{{ produto.nome }}</h5>
+            <p class="card-text">Preço: R$ {{ produto.preco }}</p>
+            <button class="btn btn-primary mt-2" (click)="openProduoDetailsModal(produto)">Ver Produto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

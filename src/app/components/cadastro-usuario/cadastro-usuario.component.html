@@ -1,0 +1,83 @@
+<div
+  class="container-fluid d-flex justify-content-center container-custom"
+  style="height: calc((100vh - 10vh) - 2px)"
+>
+  <div class="row" style="width: 100%">
+    <div class="card card-custom mx-auto my-auto px-4">
+      <div class="mt-4">
+        <h2>Cadastre-se...</h2>
+      </div>
+      <div class="mb-2">
+        <label for="email" class="form-label mt-3">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          placeholder="Seu Nome Completo"
+          required
+        />
+      </div>
+
+      <div class="mb-2">
+        <label for="email" class="form-label mt-3">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Seu email"
+          required
+        />
+      </div>
+
+      <div class="mb-2 col-12">
+        <div class="row">
+          <div class="col-6">
+            <label for="email" class="form-label mt-3">Telefone</label>
+            <input
+              type="text"
+              class="form-control"
+              id="telefone"
+              placeholder="(xx) x xxxx-xxxx"
+              required
+            />
+          </div>
+
+          <div class="col-6">
+            <label for="email" class="form-label mt-3">Cpf</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cpf"
+              placeholder="000.000.000.00"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-2">
+        <label for="email" class="form-label mt-3">Senha</label>
+        <input type="password" class="form-control" id="senha" required />
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="form-label mt-3">Repita sua Senha</label>
+        <input
+          type="password"
+          class="form-control"
+          id="senha-repeat"
+          required
+        />
+      </div>
+
+      <div class="mt-3 col-12">
+        <div class="row">
+          <div class="col-12 d-flex justify-content-center button-custon mb-3">
+            <button routerLink="/login" class="btn btn-primary botao-login me-5">Voltar</button>
+            <button class="btn btn-primary botao-login">Cadastrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.span-custom {
+      cursor: default;
+
+      &:hover {
+            background-color: white;
+            color: #0B5ED7;
+      }
+}
+.quantity-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .quantity {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
