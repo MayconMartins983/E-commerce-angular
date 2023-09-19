@@ -12,6 +12,7 @@ import { ProdutosComponent } from './components/produtos/produtos.component';
 import { ProdutoDetalhesComponent } from './shared/produto-detalhes/produto-detalhes.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ValorPipe } from './shared/pipes/valor.pipe';
+import { CarrinhoComponent } from './shared/carrinho/carrinho.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ValorPipe } from './shared/pipes/valor.pipe';
     ProdutosComponent,
     ProdutoDetalhesComponent,
     ValorPipe,
+    CarrinhoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
